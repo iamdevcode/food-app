@@ -17,6 +17,7 @@
     "expo-router": "~3.5.18",
     "expo-splash-screen": "~0.27.5",
     "expo-status-bar": "~1.12.1",
+    "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
@@ -26,5 +27,8 @@
     "react-native-screens": "3.31.1",
     "react-native-web": "~0.19.10"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "tailwindcss": "3.3.2"
+  }
 }
