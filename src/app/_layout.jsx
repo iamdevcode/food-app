@@ -1,5 +1,15 @@
-import { Slot } from 'expo-router'
+import { TabHeader } from '@/components/TabHeader'
+import { Stack } from 'expo-router'
 
 export default function RootLayout() {
-  return <Slot />
+  return (
+    <Stack>
+      <Stack.Screen
+        name="index"
+        options={{
+          header: () => <TabHeader />
+        }}
+      />
+    </Stack>
+  )
 }
