@@ -1,4 +1,4 @@
-import colors from '#/constants/colors'
+import colors from '#/constants/theme/colors'
 import icons from '#/icons'
 import { Input } from '@/components/Inputs/Input'
 import { Ionicons } from '@expo/vector-icons'

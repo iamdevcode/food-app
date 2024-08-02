@@ -1,4 +1,4 @@
-import colors from '#/constants/colors'
+import colors from '#/constants/theme/colors'
 import { Ionicons } from '@expo/vector-icons'
 import {
   BottomSheetBackdrop,
