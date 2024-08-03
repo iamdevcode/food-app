@@ -5,7 +5,7 @@ import { Link } from 'expo-router'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 
 export const Restaurant = ({ restaurant }) => (
-  <Link href={''} asChild>
+  <Link href={`/restaurant/${4}`} asChild>
     <TouchableOpacity
       className="w-[300px] relative bg-lightGrey p-1 rounded-md"
       style={{ elevation: 1 }}
