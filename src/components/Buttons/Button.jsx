@@ -15,7 +15,8 @@ export const Button = ({
     style={{
       width,
       height,
-      backgroundColor: bgColor
+      backgroundColor: bgColor,
+      elevation: 1
     }}
     onPress={onPress}
     disabled={disabled}
