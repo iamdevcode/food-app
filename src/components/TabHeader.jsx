@@ -13,7 +13,7 @@ export const TabHeader = () => {
     bottomSheetRef.current?.present()
   }
   return (
-    <View className="p-4 mt-6 w-full bg-white">
+    <View className="p-4 mt-7 w-full bg-white">
       <View className="flex-row items-center w-full">
         <TouchableOpacity>
           <Image source={icons.bike} className="w-[30px] h-[30px]" />
@@ -29,6 +29,9 @@ export const TabHeader = () => {
         </TouchableOpacity>
         <TouchableOpacity className="ml-auto bg-lightGrey rounded-full p-2">
           <Ionicons name="person-outline" size={24} color={colors.primary} />
+        </TouchableOpacity>
+        <TouchableOpacity className="ml-1 bg-lightGrey rounded-full p-2">
+          <Ionicons name="sunny" size={24} color={colors.primary} />
         </TouchableOpacity>
       </View>
       <View className="mt-5 flex-row items-center w-full">

@@ -9,7 +9,7 @@ export const restaurants = [
     duration: '35 - 45'
   },
   {
-    name: '✨Urban Greens✨',
+    name: 'Urban Greens',
     id: '2',
     rating: '4.9 Excellent',
     ratings: '(500+)',

@@ -2,18 +2,21 @@ import { categories } from '#/constants/uidata/categories'
 import { restaurants } from '#/constants/uidata/restaurants'
 import { Categorie } from '@/components/Categorie'
 import { Restaurant } from '@/components/Restaurant'
-import { MaterialIcons } from '@expo/vector-icons'
-import { FlatList, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, ScrollView, Text } from 'react-native'
 
 export default function HomeScreen() {
   return (
-    <View className="bg-white px-4" style={{ gap: 20 }}>
+    <ScrollView
+      className="bg-white p-4"
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ gap: 15 }}
+    >
       <FlatList
         data={categories}
         horizontal
         contentContainerStyle={{
           alignItems: 'flex-start',
-          gap: 5,
+          gap: 10,
           paddingVertical: 2
         }}
         renderItem={({ item: { text, img }, index }) => (
@@ -28,19 +31,16 @@ export default function HomeScreen() {
         horizontal
         contentContainerStyle={{
           alignItems: 'flex-start',
-          gap: 5,
+          gap: 10,
           paddingVertical: 2
         }}
-        renderItem={({ item: { img }, index }) => (
-          <Restaurant key={index} image={img} />
+        renderItem={({ item, index }) => (
+          <Restaurant key={index} restaurant={item} />
         )}
       />
-      <TouchableOpacity
-        className="absolute right-4 -bottom-24 w-[50px] h-[50px] justify-center items-center bg-primary rounded-full"
-        style={{ elevation: 1 }}
-      >
-        <MaterialIcons name="message" size={30} color="#fff" />
-      </TouchableOpacity>
-    </View>
+      <Text className="text-base text-mediumDark font-bold">
+        Offers near you
+      </Text>
+    </ScrollView>
   )
 }
