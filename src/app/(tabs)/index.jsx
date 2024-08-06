@@ -1,6 +1,5 @@
-import { categories } from '#/constants/uidata/categories'
 import { restaurants } from '#/constants/uidata/restaurants'
-import { Categorie } from '@/components/__molecules__/Categorie'
+import { Categories } from '@/components/__molecules__/Categories'
 import { Restaurant } from '@/components/__molecules__/Restaurant'
 import { FlatList, ScrollView, Text } from 'react-native'
 
@@ -11,18 +10,7 @@ export default function HomeScreen() {
       showsVerticalScrollIndicator={false}
       contentContainerStyle={{ gap: 15, paddingBottom: 40 }}
     >
-      <FlatList
-        data={categories}
-        horizontal
-        contentContainerStyle={{
-          alignItems: 'flex-start',
-          gap: 10,
-          paddingVertical: 2
-        }}
-        renderItem={({ item: { text, img }, index }) => (
-          <Categorie key={index} title={text} image={img} />
-        )}
-      />
+      <Categories />
       <Text className="text-base text-mediumDark font-bold">
         Top picks in your neighborhood
       </Text>
