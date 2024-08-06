@@ -1,7 +1,7 @@
 import { categories } from '#/constants/uidata/categories'
 import { restaurants } from '#/constants/uidata/restaurants'
-import { Categorie } from '@/components/Categorie'
-import { Restaurant } from '@/components/Restaurant'
+import { Categorie } from '@/components/__molecules__/Categorie'
+import { Restaurant } from '@/components/__molecules__/Restaurant'
 import { FlatList, ScrollView, Text } from 'react-native'
 
 export default function HomeScreen() {

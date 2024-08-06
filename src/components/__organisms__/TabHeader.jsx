@@ -1,6 +1,6 @@
 import colors from '#/constants/theme/colors'
 import icons from '#/icons'
-import { Input } from '@/components/Inputs/Input'
+import { Input } from '@/components/__atoms__/Inputs/Input'
 import { Ionicons } from '@expo/vector-icons'
 import { useRef } from 'react'
 import { Image, Text, TouchableOpacity, View } from 'react-native'

@@ -7,8 +7,8 @@ import {
 } from '@gorhom/bottom-sheet'
 import { forwardRef, useState } from 'react'
 import { Text, View } from 'react-native'
-import { Button } from './Buttons/Button'
-import { Input } from './Inputs/Input'
+import { Button } from '../__atoms__/Buttons/Button'
+import { Input } from '../__atoms__/Inputs/Input'
 
 export const BottomSheet = forwardRef(({}, ref) => {
   const [active, setActive] = useState(true)

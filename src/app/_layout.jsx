@@ -1,4 +1,4 @@
-import { TabHeader } from '@/components/TabHeader'
+import { TabHeader } from '@/components/__organisms__/TabHeader'
 import { AppProvider } from '@/context/app'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 import { Stack } from 'expo-router'
