@@ -9,6 +9,7 @@ export default function Home() {
     setTimeout(() => {
       // router.push('(tabs)')
       router.replace('onboarding')
+      // router.replace('(onboarding)')
     }, 1000)
   }, [])
 

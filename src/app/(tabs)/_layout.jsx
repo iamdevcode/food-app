@@ -1,6 +1,5 @@
-import colors from '#/constants/theme/colors'
-import { NumberOrders } from '@/components/__atoms__/NumberOrders'
-import { FontAwesome, Ionicons, MaterialIcons } from '@expo/vector-icons'
+import { tabs_routes } from '@/router/tabs/routes'
+import { MaterialIcons } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
 import { TouchableOpacity } from 'react-native'
 
@@ -15,42 +14,17 @@ export default function TabsLayout() {
           }
         }}
       >
-        <Tabs.Screen
-          name="index"
-          options={{
-            tabBarIcon: () => (
-              <Ionicons name="home" size={24} color={colors.primary} />
-            ),
-            tabBarShowLabel: false
-          }}
-        />
-        <Tabs.Screen
-          name="profile"
-          options={{
-            tabBarIcon: () => (
-              <FontAwesome name="user" size={24} color={colors.primary} />
-            ),
-            tabBarShowLabel: false
-          }}
-        />
-        <Tabs.Screen
-          name="cart"
-          options={{
-            tabBarIcon: () => <NumberOrders />,
-            tabBarShowLabel: false
-          }}
-        />
-        <Tabs.Screen
-          name="setting"
-          options={{
-            tabBarIcon: () => (
-              <Ionicons name="settings" size={24} color={colors.primary} />
-            ),
-            tabBarShowLabel: false
-          }}
-        />
+        {tabs_routes.map(({ name, icon }, index) => (
+          <Tabs.Screen
+            key={index}
+            name={name}
+            options={{
+              tabBarIcon: () => icon,
+              tabBarShowLabel: false
+            }}
+          />
+        ))}
       </Tabs>
-
       <TouchableOpacity
         className="absolute right-4 bottom-[80px] w-[50px] h-[50px] justify-center items-center bg-primary rounded-full"
         style={{ elevation: 1 }}

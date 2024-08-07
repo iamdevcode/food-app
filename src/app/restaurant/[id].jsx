@@ -39,7 +39,9 @@ export default function RestaurantScreen() {
         <RestaurantTags />
         <ScrollView
           contentContainerStyle={{ paddingVertical: 10 }}
-        ></ScrollView>
+        >
+          
+        </ScrollView>
       </View>
       {/* //////////////////////////////////////////////////////////////////////////////////////////////// */}
       <Stack.Screen

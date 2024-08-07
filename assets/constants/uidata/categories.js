@@ -13,14 +13,14 @@ export const categories = [
   },
   {
     text: 'Pickup',
-    img: require('#/images/c4.png')
+    img: require('#/images/c4.jpg')
   },
   {
     text: 'HOP',
-    img: require('#/images/c5.png')
+    img: require('#/images/c5.jpg')
   },
   {
     text: 'Pharmacy',
-    img: require('#/images/c6.png')
+    img: require('#/images/c6.jpg')
   }
 ]
