@@ -7,9 +7,8 @@ import { ActivityIndicator, View } from 'react-native'
 export default function Home() {
   useEffect(() => {
     setTimeout(() => {
-      // router.push('(tabs)')
-      router.replace('onboarding')
       // router.replace('(onboarding)')
+      router.replace('(tabs)')
     }, 1000)
   }, [])
 

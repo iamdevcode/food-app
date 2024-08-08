@@ -1,4 +1,4 @@
-import { categories } from '#/constants/uidata/categories'
+import { categories } from '#/constants/uidata/restaurant/categories'
 import { FlatList, Image, Text, TouchableOpacity } from 'react-native'
 
 export const Categories = () => (

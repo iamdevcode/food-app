@@ -6,7 +6,7 @@ import { Dimensions, Text, View } from 'react-native'
 
 const { width } = Dimensions.get('window')
 
-export default function OnBoardingScreen() {
+export default function GetStartedOnBoardingScreen() {
   return (
     <>
       <View
@@ -14,7 +14,7 @@ export default function OnBoardingScreen() {
         style={{ gap: 25 }}
       >
         <SvgOnBoarding width={width} />
-        <Text className="text-[26px] text-center text-mediumDark ">
+        <Text className="text-[26px] text-center text-mediumDark">
           Explore now to experience the benefits
         </Text>
         <Text className="text-medium w-4/5 mx-auto text-center">

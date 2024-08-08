@@ -1,4 +1,4 @@
-import { restaurants } from '#/constants/uidata/restaurants'
+import { restaurants } from '#/constants/uidata/restaurant/restaurants'
 import { Categories } from '@/components/__molecules__/Categories'
 import { Restaurant } from '@/components/__molecules__/Restaurant'
 import { FlatList, ScrollView, Text } from 'react-native'

@@ -4,7 +4,7 @@ import { Path, Svg } from 'react-native-svg'
 export const SvgOnBoarding = props => (
   <Svg
     width={props.width}
-    height={428}
+    height={props.height || 428}
     fill="none"
     viewBox="0 0 428 428"
     {...props}

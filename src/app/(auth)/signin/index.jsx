@@ -1,19 +1,41 @@
 import colors from '#/constants/theme/colors'
-import icons from '#/icons'
-import { SvgLogo } from '#/svg/SvgLogo'
+import { SvgOnBoarding } from '#/svg/SvgOnBoardings'
 import { Button } from '@/components/__atoms__/Buttons/Button'
-import { Separator } from '@/components/__atoms__/Separator'
+import { Input } from '@/components/__atoms__/Inputs/Input'
 import { router, Stack } from 'expo-router'
-import { View } from 'react-native'
+import {
+  Dimensions,
+  StatusBar,
+  Text,
+  TouchableOpacity,
+  View
+} from 'react-native'
+
+const { width } = Dimensions.get('screen')
 
 export default function SignInScreen() {
   return (
     <>
-      <View
-        className="flex-1 justify-center items-center bg-white mt-7 p-4"
-        style={{ gap: 25 }}
-      >
-        <SvgLogo />
+      <View className="flex-1 p-4 items-center bg-white" style={{ gap: 16 }}>
+        <SvgOnBoarding width={width} />
+        <Input
+          placeholder="Nombre de usuario..."
+          width="100%"
+          height={48}
+          txtColor={colors.mediumDark}
+          bgColor={colors.lightGrey}
+          border={colors.primary}
+          roundedFull
+        />
+        <Input
+          placeholder="Contraseña..."
+          width="100%"
+          height={48}
+          txtColor={colors.mediumDark}
+          bgColor={colors.lightGrey}
+          border={colors.primary}
+          roundedFull
+        />
         <Button
           title="Sign In"
           width="100%"
@@ -21,43 +43,19 @@ export default function SignInScreen() {
           txtColor="#fff"
           bgColor={colors.primary}
           otherStyles="rounded-full"
-          onPress={() => router.push('(tabs)')}
-        />
-        <Button
-          title="Sign Up"
-          width="100%"
-          height={48}
-          txtColor={colors.primary}
-          bgColor="#fff"
-          otherStyles="rounded-full"
           onPress={() => {}}
-          border={colors.primary}
         />
-        <Separator />
-        <Button
-          title="Continue with Google"
-          width="100%"
-          height={48}
-          txtColor={colors.mediumDark}
-          bgColor="#fff"
-          otherStyles="rounded-full"
-          onPress={() => {}}
-          icon={icons.google}
-          border={colors.medium}
-        />
-        <Button
-          title="Continue with Facebook"
-          width="100%"
-          height={48}
-          txtColor={colors.mediumDark}
-          bgColor="#fff"
-          otherStyles="rounded-full"
-          onPress={() => {}}
-          icon={icons.facebook}
-          border={colors.medium}
-        />
+        <TouchableOpacity
+          className="ml-auto"
+          onPress={() => router.push('signup')}
+        >
+          <Text className="text-medium underline">
+            Olvidaste la contraseña?
+          </Text>
+        </TouchableOpacity>
       </View>
       <Stack.Screen options={{ header: () => null }} />
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
     </>
   )
 }

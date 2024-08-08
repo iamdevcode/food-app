@@ -1,5 +1,5 @@
 import colors from '#/constants/theme/colors'
-import { restaurant } from '#/constants/uidata/restaurant'
+import { restaurant } from '#/constants/uidata/restaurant/restaurant'
 import { RestaurantTags } from '@/components/__molecules__/RestaurantTags'
 import { Feather, Ionicons } from '@expo/vector-icons'
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router'
@@ -39,9 +39,7 @@ export default function RestaurantScreen() {
         <RestaurantTags />
         <ScrollView
           contentContainerStyle={{ paddingVertical: 10 }}
-        >
-          
-        </ScrollView>
+        ></ScrollView>
       </View>
       {/* //////////////////////////////////////////////////////////////////////////////////////////////// */}
       <Stack.Screen

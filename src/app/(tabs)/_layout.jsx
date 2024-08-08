@@ -1,6 +1,6 @@
 import { tabs_routes } from '@/router/tabs/routes'
 import { MaterialIcons } from '@expo/vector-icons'
-import { Tabs } from 'expo-router'
+import { Stack, Tabs } from 'expo-router'
 import { TouchableOpacity } from 'react-native'
 
 export default function TabsLayout() {
@@ -31,6 +31,7 @@ export default function TabsLayout() {
       >
         <MaterialIcons name="message" size={30} color="#fff" />
       </TouchableOpacity>
+      
     </>
   )
 }

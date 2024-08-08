@@ -1,26 +1,48 @@
-import { SvgFirstScreen } from '#/svg/onboarding/SvgFirstScreen'
+import colors from '#/constants/theme/colors'
+import { onboarding } from '#/constants/uidata/onboarding'
+import { Button } from '@/components/__atoms__/Buttons/Button'
 import { OnBoardingScroll } from '@/components/__atoms__/OnBoardingScroll'
-import { Stack } from 'expo-router'
-import { StatusBar, Text, View } from 'react-native'
+import { router, Stack } from 'expo-router'
+import { FlatList, StatusBar, Text, View } from 'react-native'
 
-export default function FirstScreen() {
+export default function OnBoardingHomeScreen() {
   return (
     <>
-      <View className="p-8 flex-1 bg-primary">
-        <View
-          className="flex-1 justify-center items-center"
-          style={{ gap: 10 }}
-        >
-          <SvgFirstScreen />
-          <Text className="text-2xl text-white font-black mt-8">
-            Delicious Food
-          </Text>
-          <Text className="text-white text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </View>
-        <OnBoardingScroll select="first" />
-      </View>
+      <FlatList
+        className="flex-1 bg-primary"
+        horizontal
+        pagingEnabled
+        data={onboarding}
+        renderItem={({
+          item: { icon, title, description, state, button },
+          index
+        }) => (
+          <View key={index}>
+            <View
+              className="flex-1 w-[360px] justify-center items-center"
+              style={{ gap: 10 }}
+            >
+              {icon}
+              <Text className="text-2xl text-white text-center font-black mt-8">
+                {title}
+              </Text>
+              <Text className="text-white text-center px-6">{description}</Text>
+            </View>
+            {button && (
+              <Button
+                title="Get Started"
+                width="80%"
+                height={48}
+                txtColor={colors.primary}
+                bgColor="#fff"
+                otherStyles="rounded-full mb-8 mx-auto"
+                onPress={() => router.replace('(auth)')}
+              />
+            )}
+            {state && <OnBoardingScroll select={state} />}
+          </View>
+        )}
+      />
       <StatusBar barStyle="light-content" />
       <Stack.Screen options={{ header: () => null }} />
     </>

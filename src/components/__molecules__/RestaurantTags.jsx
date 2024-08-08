@@ -1,5 +1,5 @@
 import colors from '#/constants/theme/colors'
-import { restaurant } from '#/constants/uidata/restaurant'
+import { restaurant } from '#/constants/uidata/restaurant/restaurant'
 import { useState } from 'react'
 import { FlatList } from 'react-native'
 import { Button } from '../__atoms__/Buttons/Button'
