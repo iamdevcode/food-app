@@ -28,6 +28,7 @@ export const Button = ({
     disabled={disabled}
     className={clsx(
       'flex-row justify-center items-center rounded-md',
+      disabled && 'opacity-50',
       otherStyles
     )}
   >

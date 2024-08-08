@@ -2,6 +2,7 @@ import colors from '#/constants/theme/colors'
 import { SvgOnBoarding } from '#/svg/SvgOnBoardings'
 import { Button } from '@/components/__atoms__/Buttons/Button'
 import { Input } from '@/components/__atoms__/Inputs/Input'
+import { FontAwesome } from '@expo/vector-icons'
 import { router } from 'expo-router'
 import { Dimensions, Text, TouchableOpacity, View } from 'react-native'
 
@@ -15,6 +16,7 @@ export default function SignInScreen() {
         placeholder="Nombre de usuario..."
         width="100%"
         height={48}
+        icon={<FontAwesome name="user" size={24} color={colors.primary} />}
         txtColor={colors.mediumDark}
         bgColor={colors.lightGrey}
         border={colors.primary}
@@ -24,15 +26,17 @@ export default function SignInScreen() {
         placeholder="Contraseña..."
         width="100%"
         height={48}
+        type="password"
         txtColor={colors.mediumDark}
         bgColor={colors.lightGrey}
         border={colors.primary}
         roundedFull
       />
       <Button
-        title="Sign In"
+        title="Iniciar Sesión"
         width="100%"
         height={48}
+        type="password"
         txtColor="#fff"
         bgColor={colors.primary}
         otherStyles="rounded-full"
@@ -42,7 +46,7 @@ export default function SignInScreen() {
         className="ml-auto"
         onPress={() => router.push('signup')}
       >
-        <Text className="text-medium underline">Olvidaste la contraseña?</Text>
+        <Text className="text-medium underline">Aún no tienes una cuenta?</Text>
       </TouchableOpacity>
     </View>
   )

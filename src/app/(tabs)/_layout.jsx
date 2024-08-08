@@ -1,7 +1,19 @@
+import colors from '#/constants/theme/colors'
 import { TabHeader } from '@/components/__organisms__/TabHeader'
-import { tabs_routes } from '@/router/tabs/routes'
+import { FontAwesome, Ionicons } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
 import { StatusBar } from 'react-native'
+
+const tabs_routes = [
+  {
+    name: 'index',
+    icon: <Ionicons name="home" size={24} color={colors.primary} />
+  },
+  {
+    name: 'profile',
+    icon: <FontAwesome name="user" size={24} color={colors.primary} />
+  }
+]
 
 export default function TabsLayout() {
   return (

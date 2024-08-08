@@ -5,6 +5,7 @@ import { Button } from '@/components/__atoms__/Buttons/Button'
 import { Separator } from '@/components/__atoms__/Separator'
 import { router } from 'expo-router'
 import { StatusBar, View } from 'react-native'
+import Toast from 'react-native-toast-message'
 
 export default function SignInSignUpScreen() {
   return (
@@ -15,7 +16,7 @@ export default function SignInSignUpScreen() {
       >
         <SvgLogo />
         <Button
-          title="Sign In"
+          title="Iniciar Sesión"
           width="100%"
           height={48}
           txtColor="#fff"
@@ -24,7 +25,7 @@ export default function SignInSignUpScreen() {
           onPress={() => router.push('signin')}
         />
         <Button
-          title="Sign Up"
+          title="Registrarse"
           width="100%"
           height={48}
           txtColor={colors.primary}
@@ -35,24 +36,42 @@ export default function SignInSignUpScreen() {
         />
         <Separator />
         <Button
-          title="Continue with Google"
+          title="Continuar con Google"
           width="100%"
           height={48}
           txtColor={colors.mediumDark}
           bgColor="#fff"
           otherStyles="rounded-full"
-          onPress={() => {}}
+          onPress={() =>
+            Toast.show({
+              type: 'error',
+              text1: 'No disponible por el momento ☹️',
+              text1Style: {
+                color: colors.medium,
+                fontSize: 14
+              }
+            })
+          }
           icon={icons.google}
           border={colors.medium}
         />
         <Button
-          title="Continue with Facebook"
+          title="Continuar con Facebook"
           width="100%"
           height={48}
           txtColor={colors.mediumDark}
           bgColor="#fff"
           otherStyles="rounded-full"
-          onPress={() => {}}
+          onPress={() =>
+            Toast.show({
+              type: 'error',
+              text1: 'No disponible por el momento ☹️',
+              text1Style: {
+                color: colors.medium,
+                fontSize: 14
+              }
+            })
+          }
           icon={icons.facebook}
           border={colors.medium}
         />

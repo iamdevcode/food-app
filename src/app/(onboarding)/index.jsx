@@ -30,7 +30,7 @@ export default function OnBoardingHomeScreen() {
             </View>
             {button && (
               <Button
-                title="Get Started"
+                title="Empezar"
                 width="80%"
                 height={48}
                 txtColor={colors.primary}

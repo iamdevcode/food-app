@@ -33,7 +33,7 @@ export const onboarding = [
     icon: <SvgFourthScreen />,
     title: 'Pago en Línea',
     description:
-      'Realiza tus pagos de forma segura y cómoda desde nuestra app.',
+      'Realiza tus pagos de forma segura y cómoda con nuestra app.',
     state: 'fourth'
   },
   {
