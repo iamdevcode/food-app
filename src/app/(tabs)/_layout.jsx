@@ -1,14 +1,14 @@
+import { TabHeader } from '@/components/__organisms__/TabHeader'
 import { tabs_routes } from '@/router/tabs/routes'
-import { MaterialIcons } from '@expo/vector-icons'
-import { Stack, Tabs } from 'expo-router'
-import { TouchableOpacity } from 'react-native'
+import { Tabs } from 'expo-router'
+import { StatusBar } from 'react-native'
 
 export default function TabsLayout() {
   return (
     <>
       <Tabs
         screenOptions={{
-          headerShown: false,
+          header: () => <TabHeader />,
           tabBarStyle: {
             backgroundColor: '#fff'
           }
@@ -25,13 +25,7 @@ export default function TabsLayout() {
           />
         ))}
       </Tabs>
-      <TouchableOpacity
-        className="absolute right-4 bottom-[80px] w-[50px] h-[50px] justify-center items-center bg-primary rounded-full"
-        style={{ elevation: 1 }}
-      >
-        <MaterialIcons name="message" size={30} color="#fff" />
-      </TouchableOpacity>
-      
+      <StatusBar backgroundColor="#fff" />
     </>
   )
 }

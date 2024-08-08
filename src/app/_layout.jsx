@@ -1,4 +1,3 @@
-import { TabHeader } from '@/components/__organisms__/TabHeader'
 import { AppProvider } from '@/context/app'
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 import { Stack } from 'expo-router'
@@ -9,8 +8,8 @@ export default function RootLayout() {
     <AppProvider>
       <GestureHandlerRootView>
         <BottomSheetModalProvider>
-          <Stack screenOptions={{ header: () => <TabHeader /> }}>
-            <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="index" />
           </Stack>
         </BottomSheetModalProvider>
       </GestureHandlerRootView>

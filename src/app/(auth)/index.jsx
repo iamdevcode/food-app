@@ -3,8 +3,8 @@ import icons from '#/icons'
 import { SvgLogo } from '#/svg/SvgLogo'
 import { Button } from '@/components/__atoms__/Buttons/Button'
 import { Separator } from '@/components/__atoms__/Separator'
-import { router, Stack } from 'expo-router'
-import { View } from 'react-native'
+import { router } from 'expo-router'
+import { StatusBar, View } from 'react-native'
 
 export default function SignInSignUpScreen() {
   return (
@@ -57,7 +57,7 @@ export default function SignInSignUpScreen() {
           border={colors.medium}
         />
       </View>
-      <Stack.Screen options={{ header: () => null }} />
+      <StatusBar backgroundColor="#fff" />
     </>
   )
 }

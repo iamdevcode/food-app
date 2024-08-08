@@ -2,7 +2,7 @@ import colors from '#/constants/theme/colors'
 import { onboarding } from '#/constants/uidata/onboarding'
 import { Button } from '@/components/__atoms__/Buttons/Button'
 import { OnBoardingScroll } from '@/components/__atoms__/OnBoardingScroll'
-import { router, Stack } from 'expo-router'
+import { router } from 'expo-router'
 import { FlatList, StatusBar, Text, View } from 'react-native'
 
 export default function OnBoardingHomeScreen() {
@@ -44,7 +44,6 @@ export default function OnBoardingHomeScreen() {
         )}
       />
       <StatusBar barStyle="light-content" />
-      <Stack.Screen options={{ header: () => null }} />
     </>
   )
 }
